@@ -1,6 +1,11 @@
 server:
-  port: 8761
+  port: 8763
 
+spring:
+  profiles: dev
+  application:
+    name: eureka-sv
+  profile: prod
 
 eureka:
   client:
@@ -8,3 +13,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:8761
+
+config:
+  log-path: /home/rkritchat/Desktop/ep-corpt/logs

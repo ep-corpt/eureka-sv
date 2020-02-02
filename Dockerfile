@@ -8,4 +8,4 @@ COPY src/main/resources/application.yml application.yml
 
 EXPOSE 8762
 
-ENTRYPOINT ["java", "-Dspring.config.location=/app/config/application.yml", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.config.location=/app/config/application.yml", "-Dspring.profiles.active=prod", "app.jar"]
