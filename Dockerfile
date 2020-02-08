@@ -4,8 +4,6 @@ WORKDIR app/
 
 COPY target/eureka-sv-0.0.1-SNAPSHOT.jar app.jar
 
-COPY src/main/resources/application.yml application.yml
-
-EXPOSE 8762
+EXPOSE 8761
 
 ENTRYPOINT ["java", "-jar", "-Dspring.config.location=/app/config/application.yml", "-Dspring.profiles.active=prod", "app.jar"]
